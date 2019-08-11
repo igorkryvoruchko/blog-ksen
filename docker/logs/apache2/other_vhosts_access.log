@@ -3520,3 +3520,6 @@ localhost:80 172.26.0.1 - - [11/Aug/2019:06:53:25 +0000] "GET / HTTP/1.1" 403 50
 localhost:80 172.26.0.1 - - [11/Aug/2019:06:53:25 +0000] "GET /favicon.ico HTTP/1.1" 404 500 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36"
 localhost:80 192.168.48.1 - - [11/Aug/2019:07:03:10 +0000] "GET / HTTP/1.1" 200 2238 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36"
 localhost:80 192.168.48.1 - - [11/Aug/2019:07:03:34 +0000] "GET / HTTP/1.1" 200 2238 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36"
+localhost:80 192.168.48.1 - - [11/Aug/2019:07:29:55 +0000] "GET / HTTP/1.1" 200 2238 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36"
+localhost:80 192.168.48.1 - - [11/Aug/2019:07:29:58 +0000] "GET /pages/view/Igor HTTP/1.1" 200 1753 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36"
+localhost:80 192.168.48.1 - - [11/Aug/2019:07:30:00 +0000] "GET /pages/view/Igor HTTP/1.1" 200 1753 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36"
