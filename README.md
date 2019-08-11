@@ -4,7 +4,7 @@ Download:<br>
 git clone https://github.com/igorkryvoruchko/blog-ksen.git
 <hr>
 Run:<br>
-cd docker<br>
+cd blog-ksen/docker<br>
 docker-compose up -d
 <hr>
 View: localhost:80<br>
