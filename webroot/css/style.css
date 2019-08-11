@@ -1,0 +1,84 @@
+body {
+    padding-top: 70px;
+}
+
+.starter-template {
+    padding: 40px 15px;
+}
+
+form {
+    width: 400px;
+    max-width: 400px;
+}
+
+.alert {
+    width: 400px;
+    max-width: 400px;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.card-slider {
+    width: 90%;
+    margin: 3em auto 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-slider header {
+    flex: 1 1 25%;
+    padding: 0 1.5em 0 0;
+}
+
+.card-slider .inner {
+    overflow: hidden;
+    flex-wrap: wrap;
+    flex: 1 1 75%;
+}
+
+.card-slider ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    transition: left 200ms ease;
+    left: 0;
+}
+
+.card-slider ul li {
+    list-style: none;
+    position: relative;
+    flex: 1 0 250px;
+    vertical-align: top;
+    box-sizing: border-box;
+    white-space: normal;
+    padding: 0 1.5em 0 0;
+}
+
+
+.card-slider .slider-nav {
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-slider .slider-nav .disabled {
+    opacity: 0.4;
+}
+
+.card-slider .slide-next {
+    float: right;
+}

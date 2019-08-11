@@ -1,0 +1,47 @@
+<div class="card-slider" id="slider-example">
+    <header>
+        <h3>5 most commented posts</h3>
+        <div class="slider-nav">
+            <button data-direction="prev" class="disabled">Prev</button>
+            <button data-direction="next">Next</button>
+        </div>
+    </header>
+    <div class="inner">
+        <ul>
+<?php
+$mostCommented = $data['pages'];
+array_multisort(array_column($mostCommented, 'countcom'), SORT_DESC, $mostCommented);
+$i = 0;
+foreach( $mostCommented as $mc ){
+        if(++$i > 5) break;?>
+            <li>
+                <figure>
+                    <a href="/pages/view/<?=$mc['alias']?>"><?=$mc['title']?></a>
+                </figure>
+                <div>
+                    <h4>Author: <?=$mc['author']?></h4>
+                    <p>Count comments: <?=$mc['countcom']?></p>
+                </div>
+            </li>
+<?php } ?>
+        </ul>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+<?php foreach($data['pages'] as $page_data ){?>
+    <div style="margin-top: 20px">
+    <span><?=$page_data['date']?> : <?=$page_data['author']?></span><br>
+    <a href="/pages/view/<?=$page_data['alias']?>"><?=$page_data['title']?></a>
+    <p><?=$page_data['content']?></p>
+    <span>Count comments: <?=$page_data['countcom']?></span>
+    </div>
+    <hr>
+<?php } ?>
+<form action="" method="post">
+    <input type="text" name="name" placeholder="name">
+    <input type="text" name="alias" placeholder="alias"><br><br>
+    <input type="text" name="title" placeholder="title"><br><br>
+    <textarea name="content" placeholder="content"></textarea><br><br>
+    <input type="submit" value="Save Post">
+</form>

@@ -1,0 +1,28 @@
+<h4><?=$data['page']['author']?></h4>
+<h1><?=$data['page']['title']?></h1>
+
+<p>Views: <?=$data['page']['redis']?></p>
+
+<p><?=$data['page']['content']?></p>
+
+<?php if( $data['page']['image'] ){ ?>
+<img src="<?php echo '/img/'.$data['page']['image'] ?>" width="200" height="200">
+<?php } ?>
+<hr>
+<?php
+    if( $data['page']['comments'] ){
+        foreach( $data['page']['comments'] as $comment ){ ?>
+            <p><?=$comment['author']?>: <?=$comment['comment']?></p>
+<?      }
+    }
+
+?>
+
+
+<h3>Please, enter your comment here!</h3>
+<form method="post" action="">
+    <input type="hidden" name="post_id" value="<?=$data['page']['id']?>">
+    <input type="text" name="name">
+    <textarea name="comment"></textarea>
+    <input type="submit" value="Save Comment">
+</form>
