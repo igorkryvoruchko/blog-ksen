@@ -2,8 +2,8 @@
     <header>
         <h3>5 most commented posts</h3>
         <div class="slider-nav">
-            <button data-direction="prev" class="disabled">Prev</button>
-            <button data-direction="next">Next</button>
+            <button class="btn btn-primary" data-direction="prev" class="disabled">Prev</button>
+            <button class="btn btn-primary" data-direction="next">Next</button>
         </div>
     </header>
     <div class="inner">
@@ -33,15 +33,17 @@ foreach( $mostCommented as $mc ){
     <div style="margin-top: 20px">
     <span><?=$page_data['date']?> : <?=$page_data['author']?></span><br>
     <a href="/pages/view/<?=$page_data['alias']?>"><?=$page_data['title']?></a>
-    <p><?=$page_data['content']?></p>
+    <p><?=$page_data['content']?> <a href="/pages/view/<?=$page_data['alias']?>">...reed more</a></p>
     <span>Count comments: <?=$page_data['countcom']?></span>
     </div>
     <hr>
 <?php } ?>
 <form action="" method="post">
-    <input type="text" name="name" placeholder="name">
-    <input type="text" name="alias" placeholder="alias"><br><br>
-    <input type="text" name="title" placeholder="title"><br><br>
-    <textarea name="content" placeholder="content"></textarea><br><br>
-    <input type="submit" value="Save Post">
+    <div class="form-group">
+        <input type="text" class="form-control" name="name" placeholder="Enter Your Name"><br>
+        <input type="text" class="form-control" name="alias" placeholder="Enter Alias"><br>
+        <input type="text" class="form-control" name="title" placeholder="Enter Title"><br>
+        <textarea name="content" class="form-control" placeholder="Enter Content"></textarea><br>
+        <input type="submit" class="btn btn-primary" value="Save Post">
+    </div>
 </form>

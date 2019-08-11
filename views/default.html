@@ -38,7 +38,7 @@
             <li class="nav-item">
                 <a class="nav-link <?php if( App::getRouter()->getController() == 'contacts' ){?>active<?}?>" href="/contacts/">Contact Us</a>
             </li>
-            <?php if ( Session::get('login') ) { ?>
+            <!--<?php if ( Session::get('login') ) { ?>
             <li class="nav-item">
                 <a href="/users/logout/" class="nav-link">Log out</a>
             </li>
@@ -49,12 +49,8 @@
             <li class="nav-item">
                  <a href="/users/login/" class="nav-link">Sing in</a>
             </li>
-            <?php } ?>
+            <?php } ?>-->
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
     </div>
 </nav>
 
