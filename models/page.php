@@ -6,7 +6,7 @@ class Page extends Model
     public function getList($only_published = false)
     {
         $sql = "
-        SELECT  p.*, COUNT(com.post_id) AS countcom
+        SELECT  p.*, LEFT(p.content, 100) as content, COUNT(com.post_id) AS countcom
         FROM    pages p
         LEFT JOIN
                 comments com
